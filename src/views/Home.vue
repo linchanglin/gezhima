@@ -2,15 +2,17 @@
 	<div class="container">
 
 		<div class="header">
-			<el-menu theme="line" :default-active="activeIndex" class="el-menu-demo nav" mode="horizontal" @select="handleSelect">
-				<el-menu-item index="1">处理中心</el-menu-item>
-				<el-submenu index="2">
-					<template slot="title">我的工作台</template>
-					<el-menu-item index="2-1">选项1</el-menu-item>
-					<el-menu-item index="2-2">选项2</el-menu-item>
-					<el-menu-item index="2-3">选项3</el-menu-item>
+			<el-menu theme="line" :default-active="activeIndex" class="el-menu-demo nav" style="padding:0 20px" mode="horizontal" @select="handleSelect">
+				<el-menu-item index="1">南京格之玛园林科技有限公司</el-menu-item>
+				<el-menu-item index="4" style="float: right"><a href="">关于格之玛</a></el-menu-item>
+				<el-submenu index="3" style="float: right">
+					<template slot="title">产品与服务</template>
+					<el-menu-item index="3-1">选项1</el-menu-item>
+					<el-menu-item index="3-2">选项2</el-menu-item>
+					<el-menu-item index="3-3">选项3</el-menu-item>
 				</el-submenu>
-				<el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+				<el-menu-item index="2" style="float: right">行业解决方案</el-menu-item>
+				
 			</el-menu>
 		</div>
 
@@ -25,26 +27,52 @@
 				</el-carousel>
 			</div>
 
-			<div class="card" style="padding: 0 15px">
-				<el-row :gutter="30" style="margin: 0;padding: 0">
-					<el-col :span="6" v-for="(o, index) in 4" :key="o">
-						<el-card :body-style="{ padding: '0px' }">
-							<img src="/src/images/1.jpg" class="image">
-							<div style="padding: 14px;">
-								<span>好吃的汉堡</span>
-								<div class="bottom clearfix">
-								<time class="time">{{ currentDate }}</time>
-								<el-button type="text" class="button">操作按钮</el-button>
+			<div class="card" style="padding: 0px 20px 100px 20px;">
+				<div style="width: 100%; height: 100px; display: flex; justify-content: center; align-items: center">
+					<div class="title1">行业解决方案</div>
+				</div>
+				<div>
+					<el-row :gutter="30" style="margin: 0;padding: 0">
+						<el-col :span="6" v-for="(o, index) in 4" :key="o">
+							<el-card :body-style="{ padding: '0px' }">
+								<img src="/src/images/1.jpg" class="image">
+								<div style="padding: 14px;">
+									<span>江苏南京</span>
+									<div class="bottom clearfix">
+									<time class="time">{{ currentDate }}</time>
+									<el-button type="text" class="button">操作按钮</el-button>
+									</div>
 								</div>
-							</div>
-						</el-card>
-					</el-col>
-				</el-row>
+							</el-card>
+						</el-col>
+					</el-row>
+				</div>
+				
+				<div style="margin-top: 30px;">
+					<el-row :gutter="30" style="margin: 0;padding: 0">
+						<el-col :span="6" v-for="(o, index) in 4" :key="o">
+							<el-card :body-style="{ padding: '0px' }">
+								<img src="/src/images/1.jpg" class="image">
+								<div style="padding: 14px;">
+									<span>江苏南京</span>
+									<div class="bottom clearfix">
+									<time class="time">{{ currentDate }}</time>
+									<el-button type="text" class="button">操作按钮</el-button>
+									</div>
+								</div>
+							</el-card>
+						</el-col>
+					</el-row>
+				</div>
+
 			</div>
+				
 
 		</div>
 
-		<div class="footer"></div>
+		<div class="footer" style="bottom: 0; background-color: #eef1f6; color: #000000; width: 100%; height: 50px; font-size: 14px;display: flex; justify-content: center; align-items: center">
+			 南京格之玛园林科技有限公司
+		</div>
 
 	</div>
 
@@ -74,6 +102,13 @@
 </script>
 
 <style>
+
+.title1 {
+background-color: #eef1f6; color: deepskyblue; font-size: 25px;padding: 20px 40px; border-radius: 15px;
+}
+.title1:hover {
+	background-color: #ffffff; border: 3px solid deepskyblue
+}
 /*.nav {
 	display: flex;
 	background-color: #20A0FF;
