@@ -35,7 +35,7 @@
 					<el-row :gutter="30" style="margin: 0;padding: 0">
 						<el-col :span="6" v-for="(o, index) in 4" :key="o">
 							<el-card :body-style="{ padding: '0px' }">
-								<img src="/src/images/1.jpg" class="image">
+								<img src="/dist/images/1.jpg" class="image">
 								<div style="padding: 14px;">
 									<span>江苏南京</span>
 									<div class="bottom clearfix">
@@ -52,7 +52,7 @@
 					<el-row :gutter="30" style="margin: 0;padding: 0">
 						<el-col :span="6" v-for="(o, index) in 4" :key="o">
 							<el-card :body-style="{ padding: '0px' }">
-								<img src="/src/images/1.jpg" class="image">
+								<img src="/dist/images/1.jpg" class="image">
 								<div style="padding: 14px;">
 									<span>江苏南京</span>
 									<div class="bottom clearfix">
@@ -85,10 +85,10 @@
 				activeIndex: '1',
 				activeIndex2: '1',
 				images: [
-					'/src/images/1.jpg',
-					'/src/images/2.jpg',
-					'/src/images/3.jpg',
-					'/src/images/4.jpg',
+					'/dist/images/1.jpg',
+					'/dist/images/2.jpg',
+					'/dist/images/3.jpg',
+					'/dist/images/4.jpg',
 				],
 				 currentDate: new Date()
 			};
