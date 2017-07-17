@@ -22,19 +22,7 @@
 			</el-menu>
 		</div>
 	
-		<div class="carousel" style="background-color: #282828">
-			<!--<el-carousel height="560px" indicator-position="outside">
-				<el-carousel-item v-for="image in images" :key="image">
-					<img :src="image" class="image">
-				</el-carousel-item>
-			</el-carousel>-->
-	
-			<el-carousel height="560px"  :interval="5000" arrow="always">
-				<el-carousel-item v-for="item in 4" :key="item">
-					<h3>{{ item }}</h3>
-				</el-carousel-item>
-			</el-carousel>
-		</div>
+		
 	
 		<div style="padding: 4em">
 			<div>
