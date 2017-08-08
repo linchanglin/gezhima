@@ -32,82 +32,22 @@
 				</p>
 			</div>
 			<div style="margin-top: 4em; display: flex">
-				<div style="padding: 0 15px;width: 25%;">
+				<div style="padding: 0 15px;width: 25%;" v-for="product in products">
 					<div class="w3-welcome-grid-info">
 						<img style="height: 150px;" src="">
-						<h4>四体合一</h4>
-						<P>格玛企业坐落于风景秀丽的六朝古都——南京。公司经过15年发展积累了雄厚的技术力量和生产能力，子公司：南京格之玛园林科技有限公司</p>
+						<h4>{{product.name}}</h4>
+						<P>{{product.description0}}</p>
+						<P>{{product.description1}}</p>
+						<P>{{product.description2}}</p>
+						<P>{{product.description3}}</p>
+						<P>{{product.description4}}</p>
 					</div>
 				</div>
-
-				<div style="padding: 0 15px;width: 25%;">
-					<div class="w3-welcome-grid-info">
-						<img style="height: 150px;" src="">
-						<h4>四体合一</h4>
-						<P>格玛企业坐落于风景秀丽的六朝古都——南京。公司经过15年发展积累了雄厚的技术力量和生产能力，子公司：南京格之玛园林科技有限公司</p>
-					</div>
-				</div>
-
-				<div style="padding: 0 15px;width: 25%;">
-					<div class="w3-welcome-grid-info">
-						<img style="height: 150px;" src="">
-						<h4>四体合一</h4>
-						<P>格玛企业坐落于风景秀丽的六朝古都——南京。公司经过15年发展积累了雄厚的技术力量和生产能力，子公司：南京格之玛园林科技有限公司</p>
-					</div>
-				</div>
-
-				<div style="padding: 0 15px;width: 25%;">
-					<div class="w3-welcome-grid-info">
-						<img style="height: 150px;" src="">
-						<h4>四体合一</h4>
-						<P>格玛企业坐落于风景秀丽的六朝古都——南京。公司经过15年发展积累了雄厚的技术力量和生产能力，子公司：南京格之玛园林科技有限公司</p>
-					</div>
-				</div>
-
 			</div>
 			
 	
 		</div>
 	
-		<!--<div>
-					<div class="card" style="padding: 0px 20px 100px 20px;">
-						<div style="width: 100%; height: 100px; display: flex; justify-content: center; align-items: center">
-							<div class="title1">行业解决方案</div>
-						</div>
-						<div>
-							<el-row :gutter="30" style="margin: 0;padding: 0">
-								<el-col :span="6" v-for="(o, index) in 4" :key="o">
-									<el-card :body-style="{ padding: '0px' }">
-										<img src="/dist/images/1.jpg" class="image">
-										<div style="padding: 14px;">
-											<span>江苏南京</span>
-											<div class="bottom clearfix">
-												<time class="time">{{ currentDate }}</time>
-												<el-button type="text" class="button">操作按钮</el-button>
-											</div>
-										</div>
-									</el-card>
-								</el-col>
-							</el-row>
-						</div>
-						<div style="margin-top: 30px;">
-							<el-row :gutter="30" style="margin: 0;padding: 0">
-								<el-col :span="6" v-for="(o, index) in 4" :key="o">
-									<el-card :body-style="{ padding: '0px' }">
-										<img src="/dist/images/1.jpg" class="image">
-										<div style="padding: 14px;">
-											<span>江苏南京</span>
-											<div class="bottom clearfix">
-												<time class="time">{{ currentDate }}</time>
-												<el-button type="text" class="button">操作按钮</el-button>
-											</div>
-										</div>
-									</el-card>
-								</el-col>
-							</el-row>
-						</div>
-					</div>
-				</div>-->
 	
 		<div style="height:620px; background-color: rgb(230, 230, 230)">
 			<div style="display: flex; flex-direction: column;justify-content: center; align-items: center; padding: 0px 40px">
@@ -143,19 +83,6 @@
 				</div>
 			</div>
 	
-			<!--<div style="width: 50%;height: 100%; display: flex;justify-content: center; align-item: center; font-size: 16px; color: green">
-							<div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
-								<p>南京格之玛园林科技有限公司</p>
-								<p>销售负责人：139 5160 2757</p>
-							</div>
-						</div>
-				
-						<div style="width: 50%;height: 100%; display: flex;justify-content: center; align-item: center; font-size: 16px; color: green">
-							<div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
-								<p>南京格之玛园林科技有限公司</p>
-								<p>销售负责人：139 5160 2757</p>
-							</div>
-						</div>-->
 	
 			<div style="display: flex; justify-content: flex-start; align-items: flex-start">
 				<div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start">
@@ -198,6 +125,19 @@
 export default {
 	data() {
 		return {
+			products: [
+				{name: '八方来宾', description0: '整体尺寸：H=2.2m，L=1.4m', description1:'1.8只直径0.5m高分子复合材料整体花盆；', description2: '2.主体采用直径60mm焊管焊接成整体；', description3: '3.钢件进行热镀锌处理；', description4: '4.镀锌层做毛后，进行200℃静电喷塑。'},
+				{name: '八方来宾', description0: '整体尺寸：H=2.2m，L=1.4m', description1:'1.8只直径0.5m高分子复合材料整体花盆；', description2: '2.主体采用直径60mm焊管焊接成整体；', description3: '3.钢件进行热镀锌处理；', description4: '4.镀锌层做毛后，进行200℃静电喷塑。'},
+				{name: '八方来宾', description0: '整体尺寸：H=2.2m，L=1.4m', description1:'1.8只直径0.5m高分子复合材料整体花盆；', description2: '2.主体采用直径60mm焊管焊接成整体；', description3: '3.钢件进行热镀锌处理；', description4: '4.镀锌层做毛后，进行200℃静电喷塑。'},
+				{name: '八方来宾', description0: '整体尺寸：H=2.2m，L=1.4m', description1:'1.8只直径0.5m高分子复合材料整体花盆；', description2: '2.主体采用直径60mm焊管焊接成整体；', description3: '3.钢件进行热镀锌处理；', description4: '4.镀锌层做毛后，进行200℃静电喷塑。'},
+
+				{name: '八方来宾', description: '整体尺寸：H=2.2m，L=1.4m。1.8只直径0.5m高分子复合材料整体花盆；2.主体采用直径60mm焊管焊接成整体；3.钢件进行热镀锌处理；4.镀锌层做毛后，进行200℃静电喷塑。'},
+				{name: '八方来宾', description: '整体尺寸：H=2.2m，L=1.4m。1.8只直径0.5m高分子复合材料整体花盆；2.主体采用直径60mm焊管焊接成整体；3.钢件进行热镀锌处理；4.镀锌层做毛后，进行200℃静电喷塑。'},
+			],
+
+
+
+
 			activeIndex: '1',
 			activeIndex2: '1',
 			images: [
